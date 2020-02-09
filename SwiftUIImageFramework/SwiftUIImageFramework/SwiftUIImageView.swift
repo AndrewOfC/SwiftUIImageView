@@ -64,9 +64,10 @@ public struct SwiftUIImageView: View {
     let offx = ((image_w)-sw)/2.0 ;
     let offy = ((image_h)-sh)/2.0 ;
     
+    
     return image
       .frame(width: image_w, height: image_h)
-      .position(x: (image_w)/2, y: (image_h)/2)
+      .position(x: ((image_w)/2), y: ((image_h)/2))
       .offset(x: offx, y: offy).scaleEffect(scale)
       .gesture(MagnificationGesture()
                  .onChanged { nscale in
